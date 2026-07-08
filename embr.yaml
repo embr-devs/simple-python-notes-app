@@ -1,0 +1,12 @@
+platform: python  # FastAPI app detected (requirements.txt + application.py + backend/)
+platformVersion: "3.14"  # README example showing platformVersion "3.14"
+
+run:
+  port: 8080  # "Deploy to Embr" snippet in README and common Python HTTP port in repo docs
+
+healthCheck:
+  enabled: true  # enable app-level health monitoring (recommended for web services)
+  path: "/health"  # README and schema recommend /health for backend health checks
+  expectedStatusCode: 200  # standard healthy response
+
+# Heads-up: only the latest commit on main was scanned; review this config before deploying.
